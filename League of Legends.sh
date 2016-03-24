@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env playonlinux-bash
 # Date : (2012-04-12)
 # Last revision : (2015-05-31 08:27)
 # Distribution used to test : ArchLinux, Debian Sid
@@ -33,11 +33,13 @@
 #       - use Wine 1.7.44-LeagueOfLegends2 to fix patcher issue
 # (2016-01-26) 12:55 (UTC) - Jeddunk
 #       - upgrade Wine to 1.9.2-LeagueOfLegends5
+# (2016-03-24) 22:22 - Translator5
+#		- upgrade Wine to 1.9.6
  
 [ "$PLAYONLINUX" = "" ] && exit 0
 source "$PLAYONLINUX/lib/sources"
  
-WINEVERSION="1.9.2-LeagueOfLegends5"
+WINEVERSION="1.9.6"
  
 TITLE="League of Legends"
 PREFIX="LeagueOfLegends"
@@ -58,7 +60,7 @@ fi
  
 POL_Debug_Init
  
-POL_SetupWindow_presentation "League of Legends" "Riot" "http://www.riotgames.com/" "Quentin PÂRIS, BlondVador" "LeagueOfLegends"
+POL_SetupWindow_presentation "$TITLE" "Riot" "http://www.riotgames.com/" "Quentin PÂRIS, BlondVador" "LeagueOfLegends"
  
 POL_SetupWindow_InstallMethod "DOWNLOAD,LOCAL"
  
