@@ -23,7 +23,7 @@ source "$PLAYONLINUX/lib/sources"
  
 TITLE="World Of Tanks"
 PREFIX="WorldOfTanks"
-WORKING_WINE_VERSION="1.9.6"
+WORKING_WINE_VERSION="1.9.5"
 PUBLISHER="BigWorld Technology"
 GAME_URL="http://worldoftanks.com/"
 AUTHOR="Robbz"
