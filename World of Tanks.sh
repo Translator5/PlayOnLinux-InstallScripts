@@ -16,6 +16,8 @@
 #   Adding vcrun2012, needed by new game version
 # [petch] (2015-11-23)
 #   Switch off torrent support
+# [Translator5] (2016-03-25)
+#	Update Wine to 1.6.5
  
  
 [ "$PLAYONLINUX" = "" ] && exit 0
