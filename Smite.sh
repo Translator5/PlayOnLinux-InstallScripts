@@ -2,7 +2,7 @@
 # A PlayOnLinux/Mac install script for SMITE.
 # Date : (2015-08-18)
 # Last revision : (2016-03-24 22:22)
-# Wine version used : 1.9.6
+# Wine version used : 1.9.5
 # Distribution used to test : Linux Mint 17.3 ROSA 64bit
 # Licence : GPLv3
 # Author : Rolando Islas
