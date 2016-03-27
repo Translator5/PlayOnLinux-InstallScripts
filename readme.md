@@ -4,7 +4,7 @@ Windows-Software Install Script - PlayOnLinux/PlayOnMac
 This is a mostly automated script for [PlayOnMac/PlayOnLinux] that will install your choosen Game.
 To choose a game browse the branches of this repository.
 
-##Required on Linux for Smite
+##Required on Linux for [Smite]
 
 "echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope"
 or manually
@@ -22,7 +22,7 @@ or manually
 
 ## Post-Install
 
-###### Crash on open Shop in League of Legends
+###### Crash on open Shop in [League of Legends]
 Navigate to the install directory and configure the game.cfg by adding "x3d_platform=1" below [General].
 ```
 home/user//.PlayOnLinux/wineprefix/LeagueOfLegends/drive_c/Riot Games/League of Legends/Config/game.cfg
@@ -43,8 +43,8 @@ OS X users can use [`Mac Resolution Edit.command`](./Mac%20Resolution%20Edit.com
 
 [PlayOnMac/PlayOnLinux]: https://www.playonlinux.com
 [Smite]: http://www.smitegame.com
-[League of Legends] http://euw.leagueoflegends.com
-[Pretty TV] http://schoener-fernsehen.com
-[World of Tanks] http://worldoftanks.com
+[League of Legends]: http://euw.leagueoflegends.com
+[Pretty TV]: http://schoener-fernsehen.com
+[World of Tanks]: http://worldoftanks.com
 [installer]: http://hirez.http.internapcdn.net/hirez/InstallSmite.exe
 ["More Information about"]: https://www.playonlinux.com/en/topic-10534-Regarding_ptrace_scope_fatal_error.html
