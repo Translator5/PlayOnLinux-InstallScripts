@@ -1,23 +1,22 @@
 #!/usr/bin/env playonlinux-bash
-# A PlayOnLinux/Mac install script for SMITE.
-# Date : (2015-08-18)
-# Last revision : (2016-03-24 22:22)
+# A PlayOnLinux/Mac install script for SchoenerFernsehen.
+# Date : (2016-03-27)
 # Wine version used : 1.9.6
 # Distribution used to test : Linux Mint 17.3 ROSA 64bit
 # Licence : GPLv3
-# Author : Rolando Islas
+# Author : Translator5
 
 [ "$PLAYONLINUX" = "" ] && exit 0
 source "$PLAYONLINUX/lib/sources"
 
-TITLE="SMITE"
-PREFIX="Smite"
-WINEVERSION="1.9.5"
+TITLE="Schöner Fernsehen"
+PREFIX="SchoenerFernsehen"
+WINEVERSION="1.9.6"
 
 POL_SetupWindow_Init
 POL_Debug_Init
 
-POL_SetupWindow_presentation "$TITLE" "Hi-Rez Studios" "http://www.smitegame.com/" "Rolando Islas" "Smite"
+POL_SetupWindow_presentation "$TITLE" "Schoener-Fernsehen" "http://www.smitegame.com/" "Translator5" "SchoenerFernsehen"
 
 POL_SetupWindow_InstallMethod "DOWNLOAD,LOCAL"
 
@@ -28,8 +27,8 @@ if [ "$INSTALL_METHOD" = "LOCAL" ]; then
 else
 	POL_System_TmpCreate "$PREFIX"
  
-	DOWNLOAD_URL="http://hirez.http.internapcdn.net/hirez/InstallSmite.exe"
-	DOWNLOAD_MD5="9cdc39efb3c26e5d10b023d5a015ff7e"
+	DOWNLOAD_URL="http://schoener-fernsehen.com/files/SchoenerFernsehen_install_0.0.0.2c.exe"
+	DOWNLOAD_MD5="7E3407747E005FE6120B7F5E858883A9"
 	DOWNLOAD_FILE="$POL_System_TmpDir/$(basename "$DOWNLOAD_URL")"
  
 	POL_Call POL_Download_retry "$DOWNLOAD_URL" "$DOWNLOAD_FILE" "$DOWNLOAD_MD5" "$TITLE installer"
@@ -45,16 +44,13 @@ if [ "$POL_OS" = "Linux" ]; then
 	POL_Call POL_Function_RootCommand "echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope; exit"
 fi
 
-POL_Call POL_Install_d3dx10
-POL_Call POL_Install_d3dx11
-POL_Call POL_Install_d3dx9_43
-POL_Call POL_Install_directx9
-POL_Call POL_Install_dotnet35sp1
-POL_Call POL_Install_dotnet40
-POL_Call POL_Install_flashplayer
+POL_Call POL_Install_FontsSmoothBGR
+POL_Call POL_Install_FontsSmoothGrayScale
+POL_CAll POL_Install_FontsSmoothRGB
+POL_Call POL_Install_AdobeAir
+POL_Call POL_Install_xvid
+POL_Call POL_Install_Flashplayer_ActiveX
 POL_Call POL_Install_gdiplus
-POL_Call POL_Install_vcrun2008
-POL_Call POL_Install_vcrun2010
 POL_Call POL_Install_xact
 
 Set_OS "win7"
@@ -65,7 +61,7 @@ POL_Wine "$FULL_INSTALLER"
 Set_OS "winxp"
 
 POL_Call POL_Function_OverrideDLL builtin,native dnsapi
-POL_Shortcut "HiRezLauncherUI.exe" "$TITLE" "" "game=300 product=17"
+POL_Shortcut "SchoenerFernsehen.exe" "$TITLE" "" ""
 
 if [ "$INSTALL_METHOD" = "DOWNLOAD" ]; then
 	POL_System_TmpDelete
