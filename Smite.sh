@@ -12,8 +12,8 @@ source "$PLAYONLINUX/lib/sources"
 
 TITLE="SMITE"
 PREFIX="Smite"
-WINEVERSION="1.9.6"
- 
+WINEVERSION="1.9.5"
+
 POL_SetupWindow_Init
 POL_Debug_Init
 
