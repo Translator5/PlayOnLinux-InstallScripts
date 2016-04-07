@@ -11,7 +11,7 @@ source "$PLAYONLINUX/lib/sources"
 
 TITLE="Schöner Fernsehen"
 PREFIX="SchoenerFernsehen"
-WINEVERSION="1.9.6"
+WINEVERSION="1.9.7"
 
 POL_SetupWindow_Init
 POL_Debug_Init
