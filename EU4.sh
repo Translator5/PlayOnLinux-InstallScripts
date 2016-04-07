@@ -9,14 +9,14 @@
 [ "$PLAYONLINUX" = "" ] && exit 0
 source "$PLAYONLINUX/lib/sources"
 
-TITLE="Schöner Fernsehen"
-PREFIX="SchoenerFernsehen"
+TITLE="Europa Universalis IV"
+PREFIX="EuropaUniversalis4"
 WINEVERSION="1.9.7"
 
 POL_SetupWindow_Init
 POL_Debug_Init
 
-POL_SetupWindow_presentation "$TITLE" "Schoener-Ferhnsehen.com" "http://schoener-fernsehen.com/" "Translator5" "SchoenerFernsehen"
+POL_SetupWindow_presentation "$TITLE" "Paradox Interactive" "http://www.europauniversalis4.com/" "Translator5" "Europa Universalis IV"
 
 POL_SetupWindow_InstallMethod "LOCAL"
 
@@ -30,7 +30,9 @@ POL_System_SetArch "x86"
 POL_Wine_SelectPrefix "$PREFIX"
 POL_Wine_PrefixCreate "$WINEVERSION"
 
-POL_Call POL_Install_FontsSmoothBGR
+POL_Call POL_Install_d3d_compiler_43
+POL_Call POL_Install_d3dx9
+# POL_Call POL_Install_vcrun2015
 
 Set_OS "win7"
 
@@ -39,7 +41,7 @@ POL_Wine "$FULL_INSTALLER"
 
 Set_OS "winxp"
 
-POL_Shortcut "SchoenerFernsehen.exe" "$TITLE" "" ""
+POL_Shortcut "eu4.exe" "$TITLE" "" ""
 
 POL_SetupWindow_Close
 exit
