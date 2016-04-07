@@ -30,7 +30,7 @@ POL_System_SetArch "x86"
 POL_Wine_SelectPrefix "$PREFIX"
 POL_Wine_PrefixCreate "$WINEVERSION"
 
-POL_Call POL_Install_d3d_compiler_43
+POL_Call POL_Install_d3dcompiler_43
 POL_Call POL_Install_d3dx9
 # POL_Call POL_Install_vcrun2015
 
