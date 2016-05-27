@@ -9,7 +9,7 @@ source "$PLAYONLINUX/lib/sources"
  
 TITLE="Mozilla Firefox"
 PREFIX="MozillaFirefox"
-WORKING_WINE_VERSION="1.9.6"
+WORKING_WINE_VERSION="1.9.10"
  
 PLUGIN_NAME_FLASH="Flash Player"
 PLUGIN_NAME_SHOCKWAVE="Shockwave Player"
