@@ -11,13 +11,15 @@
 #   Update gettext messages
 # [Bratzmeister] (2015-11-17 10-38)
 #   added Support for the new mandatory 64bit client and improved fps with CSMT
+# [Translator5] (2016-01-03)
+#   Update Wine
  
 [ "$PLAYONLINUX" = "" ] && exit 0
 source "$PLAYONLINUX/lib/sources"
  
 TITLE="PlanetSide 2"
 PREFIX="PlanetSide2"
-WORKING_WINE_VERSION="1.9.9"
+WORKING_WINE_VERSION="1.9.10"
 PUBLISHER="Sony Entertainment"
 GAME_URL="https://www.planetside2.com/"
 AUTHOR="Robbz"
