@@ -17,7 +17,9 @@
 # [petch] (2015-11-23)
 #   Switch off torrent support
 # [Translator5] (2016-03-25)
-#	Update Wine to 1.6.5
+#	Update Wine to 1.9.5 (Stable)
+#   Wine 1.9.6 - 1.9.7 aren't stable enough for WOT
+#   Update Wine to 1.9.10
  
  
 [ "$PLAYONLINUX" = "" ] && exit 0
@@ -25,7 +27,7 @@ source "$PLAYONLINUX/lib/sources"
  
 TITLE="World Of Tanks"
 PREFIX="WorldOfTanks"
-WORKING_WINE_VERSION="1.9.5"
+WORKING_WINE_VERSION="1.9.10"
 PUBLISHER="BigWorld Technology"
 GAME_URL="http://worldoftanks.com/"
 AUTHOR="Robbz"
