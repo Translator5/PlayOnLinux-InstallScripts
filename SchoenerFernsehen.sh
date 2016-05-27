@@ -1,7 +1,7 @@
 #!/usr/bin/env playonlinux-bash
 # A PlayOnLinux/Mac install script for SchoenerFernsehen.
-# Date : (2016-03-27)
-# Wine version used : 1.9.6
+# Date : (2016-05-27)
+# Wine version used : 1.9.10
 # Distribution used to test : Linux Mint 17.3 ROSA 64bit
 # Licence : GPLv3
 # Author : Translator5
@@ -11,7 +11,7 @@ source "$PLAYONLINUX/lib/sources"
 
 TITLE="Schöner Fernsehen"
 PREFIX="SchoenerFernsehen"
-WINEVERSION="1.9.6"
+WINEVERSION="1.9.10"
 
 POL_SetupWindow_Init
 POL_Debug_Init
