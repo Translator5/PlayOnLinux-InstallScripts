@@ -12,7 +12,7 @@ source "$PLAYONLINUX/lib/sources"
 
 TITLE="Endless Legend"
 PREFIX="ENDLESSLEGEND"
-WINEVERSION="1.9.7"
+WINEVERSION="1.9.10"
 
 POL_SetupWindow_Init
 POL_Debug_Init
