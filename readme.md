@@ -48,3 +48,5 @@ OS X users can use [`Mac Resolution Edit.command`](./Mac%20Resolution%20Edit.com
 [World of Tanks]: http://worldoftanks.com
 [installer]: http://hirez.http.internapcdn.net/hirez/InstallSmite.exe
 ["More Information about"]: https://www.playonlinux.com/en/topic-10534-Regarding_ptrace_scope_fatal_error.html
+...
+Wine 1.9.10 - 27. May 2016
