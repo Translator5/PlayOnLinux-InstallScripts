@@ -18,6 +18,9 @@ or manually
 * From the `Tools` menu choose `Run a Local Script` and select e.g. [`Smite.sh`](./Smite.sh).
 * Follow the install instructions.
 
+##Executing your script
+##Ask your favorite text editor to save your script, then use the function Run a local script from the Tools menu of PlayOnLinux.
+
 ###### Note: The auto-download is unreliable due to the installer executable/checksum changing occasionally. It is recommended to download the [installer] separately and choose to install via the local option.
 
 ## Post-Install
@@ -49,4 +52,4 @@ OS X users can use [`Mac Resolution Edit.command`](./Mac%20Resolution%20Edit.com
 [installer]: http://hirez.http.internapcdn.net/hirez/InstallSmite.exe
 ["More Information about"]: https://www.playonlinux.com/en/topic-10534-Regarding_ptrace_scope_fatal_error.html
 ...
-Wine 1.9.10 - 27. May 2016
+Wine 1.9.15 - 30. July 2016
