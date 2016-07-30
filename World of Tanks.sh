@@ -4,7 +4,7 @@
 # Distribution used to test : OpenSUSE 13.1
 # Author : Robbz
 # Licence : GPLv3
-# PlayOnLinux:  playonlinux-4.2.9
+# PlayOnLinux:  playonlinux-4.2.10
  
 # CHANGELOG
 # [Robbz] (2014-2-10)
@@ -27,7 +27,7 @@ source "$PLAYONLINUX/lib/sources"
  
 TITLE="World Of Tanks"
 PREFIX="WorldOfTanks"
-WORKING_WINE_VERSION="1.9.10"
+WORKING_WINE_VERSION="1.9.15"
 PUBLISHER="BigWorld Technology"
 GAME_URL="http://worldoftanks.com/"
 AUTHOR="Robbz"
