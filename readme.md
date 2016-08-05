@@ -10,6 +10,8 @@ To choose a game browse the branches of this repository.
 or manually
 "kernel.yama.ptrace_scope = 0" in /etc/sysctl.d/10-ptrace.conf
 
+Also you have to download .NET Framework 3.5 installer and the Smite installer, than run the installer!
+
 ["More Information about"]
 
 ## Install
