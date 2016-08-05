@@ -23,6 +23,14 @@ or manually
 
 ###### Note: The auto-download is unreliable due to the installer executable/checksum changing occasionally. It is recommended to download the [installer] separately and choose to install via the local option.
 
+## More FPS & pretty windows
+
+To fix the FPS and get pretty windows, simply enabled the folloging in your winecfg, category staging.
+CSMT
+VAAPI
+EAX
+GTK3 
+
 ## Post-Install
 
 ###### Crash on open Shop in [League of Legends]
@@ -51,5 +59,5 @@ OS X users can use [`Mac Resolution Edit.command`](./Mac%20Resolution%20Edit.com
 [World of Tanks]: http://worldoftanks.com
 [installer]: http://hirez.http.internapcdn.net/hirez/InstallSmite.exe
 ["More Information about"]: https://www.playonlinux.com/en/topic-10534-Regarding_ptrace_scope_fatal_error.html
-...
-Wine 1.9.15 - 30. July 2016
+
+... Wine 1.9.15-staging - 05. August 2016
