@@ -9,9 +9,11 @@ To choose a game browse the branches of this repository.
 "echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope"
 or manually
 "kernel.yama.ptrace_scope = 0" in /etc/sysctl.d/10-ptrace.conf
+
 ["More Information about"]
 
 Also you have to download .NET Framework 3.5 installer and the Smite installer, than run the installer!
+
 [Smite] & [.NET Framework 3.5]
 
 ## Install
@@ -63,4 +65,7 @@ OS X users can use [`Mac Resolution Edit.command`](./Mac%20Resolution%20Edit.com
 ["More Information about"]: https://www.playonlinux.com/en/topic-10534-Regarding_ptrace_scope_fatal_error.html
 [.NET Framework 3.5]: https://www.microsoft.com/en-US/download/details.aspx?id=21
 
-... Wine 1.9.15-staging - 05. August 2016
+
+... Wine 1.9.15-staging
+... DOS-Wine .1.6.2-dos-support_0.6
+... Last full edit 05. August 2016
