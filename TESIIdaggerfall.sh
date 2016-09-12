@@ -1,18 +1,15 @@
 #!/bin/bash
-# Date : (2012-04-15 18-02)
-# Last revision : (2013-07-02 23-16)
-# Wine version used : 1.4-dos_support_0.6
-# Distribution used to test : Debian Sid (Unstable)
+# Date : (2016-09-12 18-02)
+# Wine version used : 1.6.2-dos_support_0.6
+# Distribution used to test : Linux Mint 18 x64
 # Author : Pierre Etchemaite pe-pol@concept-micro.com
 # Script licence : GPL v.2
-# Program licence : Retail
-# Depend :
  
 [ -z "$PLAYONLINUX" ] && exit 0
 source "$PLAYONLINUX/lib/sources"
  
 PREFIX="ElderScrolls_Daggerfall"
-WORKING_WINE_VERSION="1.4-dos_support_0.6"
+WORKING_WINE_VERSION="1.6.2-dos_support_0.6"
  
 TITLE="The Elder Scrolls II: Daggerfall"
 SHORTCUT_NAME="The Elder Scrolls II: Daggerfall"
@@ -48,12 +45,12 @@ IF YOU DO NOT AGREE, DO NOT INSTALL.
 _EOFTOU_
         POL_SetupWindow_licence "Terms of Use of Daggerfall" "$TITLE" "$POL_USER_ROOT/tmp/daggerfall_tou.txt"
  
-        POL_Download "http://dl2.hwupgrade.it/dl/7b0fe63e3676efa29f5bd7b9f2f36704/55a699dc/videogiochi/demo/DFInstall.zip" "3cdd09a5696c2b94c58b85488be7cba2"
+        POL_Download "http://static.elderscrolls.com/elderscrolls.com/assets/files/tes/extras/DFInstall.zip" "3cdd09a5696c2b94c58b85488be7cba2"
 fi
  
 cd "$POL_USER_ROOT/tmp"
  
-POL_Download "http://theelderscrolls.wiwiland.net/Fichiers/DaggerfallManuel.pdf" "423efeebc9adfbddf5b8bd7e566d1eac"
+POL_Download "http://theelderscrolls.wiwiland.net/Fichiers/DaggerfallManuel.pdf" "5e88de1c3b112734a7b949938508b6df"
  
 POL_Download "http://files.playonlinux.com/unpk.py" "0e358342663c933eb7e49bb11d0ab1f2"
  
