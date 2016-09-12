@@ -3,7 +3,8 @@
 # Wine version used : 1.6.2-dos_support_0.6
 # Distribution used to test : Linux Mint 18 x64
 # Script licence : GPL v.2
- 
+# Author : Pierre Etchemaite pe-pol@concept-micro.com 
+
 [ -z "$PLAYONLINUX" ] && exit 0
 source "$PLAYONLINUX/lib/sources"
  
