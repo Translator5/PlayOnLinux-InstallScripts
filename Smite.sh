@@ -14,7 +14,7 @@ TITLE=".NET Framework 3.5 & Smite"
 TITLE1=".NET Framework 3.5"
 TITLE2="SMITE"
 PREFIX="Smite"
-WINEVERSION="1.9.15-staging"
+WINEVERSION="1.9.18-staging"
 
 {
 POL_SetupWindow_Init
