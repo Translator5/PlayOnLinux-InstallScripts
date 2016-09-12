@@ -1,19 +1,14 @@
 #!/bin/bash
-# Date : (2012-04-15 15-35)
-# Last revision : (2013-10-30 22-11)
-# Wine version used : 1.4-dos_support_0.6
-# Distribution used to test : Debian Sid (Unstable)
-# Author : Pierre Etchemaite pe-pol@concept-micro.com
+# Date : (2016-09-12 15-35)
+# Wine version used : 1.6.2-dos_support_0.6
+# Distribution used to test : Linux Mint 18 x64
 # Script licence : GPL v.2
-# Program licence : Retail
-# Depend :
  
 [ -z "$PLAYONLINUX" ] && exit 0
 source "$PLAYONLINUX/lib/sources"
  
 PREFIX="ElderScrolls_Arena"
-WORKING_WINE_VERSION="1.4-dos_support_0.6"
- 
+WORKING_WINE_VERSION="1.6.2-dos_support_0.6"
 TITLE="The Elder Scrolls I: Arena"
 SHORTCUT_NAME="The Elder Scrolls I: Arena"
  
