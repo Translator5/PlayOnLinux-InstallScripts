@@ -36,11 +36,12 @@
 # (2016-03-24) 22:22 - Translator5
 #		- upgrade Wine to 1.9.6
 #		- 2016.03.27 Wine 1.9.10
+#		- 2016.11.03 Wine 1.9.22-staging
  
 [ "$PLAYONLINUX" = "" ] && exit 0
 source "$PLAYONLINUX/lib/sources"
  
-WINEVERSION="1.9.10"
+WINEVERSION="1.9.22-staging"
  
 TITLE="League of Legends"
 PREFIX="LeagueOfLegends"
