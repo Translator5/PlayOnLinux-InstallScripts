@@ -17,6 +17,7 @@ PREFIX="Smite"
 WINEVERSION="1.9.18-staging"
 
 {
+	#First choose the Framework 3.5 Installer full/Offline)
 POL_SetupWindow_Init
 POL_Debug_Init
 POL_SetupWindow_message "Before you start the installation, you should download the and the .NET Framework 3.5 installer and the Smite installer. This kind of installation is more understandable!" "REQUISITES"
@@ -25,6 +26,7 @@ POL_SetupWindow_presentation "$TITLE1" "https://www.microsoft.com/en-US/download
 	POL_SetupWindow_browse "$(eval_gettext 'Please select the setup file to run.')" "$TITLE" "" "Windows Executables (*.exe)|*.exe;*.EXE"
 	DOTNET35_INSTALLER="$APP_ANSWER"
 
+	#Than choose the Smite Installer
 POL_SetupWindow_InstallMethod "DOWNLOAD,LOCAL"
 
 if [ "$INSTALL_METHOD" = "LOCAL" ]; then
@@ -53,7 +55,7 @@ if [ "$POL_OS" = "Linux" ]; then
 fi
 
 {
-POL_Call POL_Install_flashplayer
+POL_Call POL_Install_flashplayer_activeX
 POL_Call POL_Install_corefonts
 POL_Call POL_Install_gdiplus
 POL_Call POL_Install_directx9
@@ -65,7 +67,13 @@ POL_Call POL_Install_vcrun2010
 POL_Call POL_Install_xact
 POL_Call POL_Install_msxml3
 POL_Call POL_Install_dotnet20
+POL_Call POL_Install_dotnet20sp1
 POL_Call POL_Install_dotnet20sp2
+POL_Call POL_Install_dotnet30
+POL_Call POL_Install_dotnet30sp1
+POL_Call POL_Install_dotnet35
+POL_Call POL_Install_dotnet40
+POL_Call POL_Install_dotnet45
 }
 
 POL_Wine_WaitBefore "$TITLE1"
