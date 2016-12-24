@@ -10,29 +10,22 @@
 [ "$PLAYONLINUX" = "" ] && exit 0
 source "$PLAYONLINUX/lib/sources"
 
-TITLE=".NET Framework 3.5 & Smite"
-TITLE1=".NET Framework 3.5"
-TITLE2="SMITE"
+TITLE="SMITE"
 PREFIX="Smite"
-WINEVERSION="1.9.18-staging"
+WINEVERSION="1.9.22-staging"
 
 {
 	#First choose the Framework 3.5 Installer full/Offline)
 POL_SetupWindow_Init
 POL_Debug_Init
-POL_SetupWindow_message "Before you start the installation, you should download the and the .NET Framework 3.5 installer and the Smite installer. This kind of installation is more understandable!" "REQUISITES"
-POL_SetupWindow_presentation "$TITLE1" "https://www.microsoft.com/en-US/download/details.aspx?id=21" "Windows"
-	cd "$HOME"
-	POL_SetupWindow_browse "$(eval_gettext 'Please select the setup file to run.')" "$TITLE" "" "Windows Executables (*.exe)|*.exe;*.EXE"
-	DOTNET35_INSTALLER="$APP_ANSWER"
 
 	#Than choose the Smite Installer
 POL_SetupWindow_InstallMethod "DOWNLOAD,LOCAL"
 
 if [ "$INSTALL_METHOD" = "LOCAL" ]; then
 	cd "$HOME"
-	POL_SetupWindow_browse "$(eval_gettext 'Please select the setup file to run.')" "$TITLE2" "" "Windows Executables (*.exe)|*.exe;*.EXE"
-	FULL_INSTALLER="$APP_ANSWER"
+	POL_SetupWindow_browse "$(eval_gettext 'Please select the setup file to run.')" "$TITLE" "" "Windows Executables (*.exe)|*.exe;*.EXE"
+	SMITE_INSTALLER="$APP_ANSWER"
 else
 	POL_System_TmpCreate "$PREFIX"
 
@@ -49,38 +42,34 @@ fi
 POL_System_SetArch "x86"
 POL_Wine_SelectPrefix "$PREFIX"
 POL_Wine_PrefixCreate "$WINEVERSION"
-Set_OS "win7"
+
 if [ "$POL_OS" = "Linux" ]; then
 	POL_Call POL_Function_RootCommand "echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope; exit"
 fi
 
-{
-POL_Call POL_Install_flashplayer_activeX
-POL_Call POL_Install_corefonts
+Set_OS "winxp"
+#POL_Call POL_Install_mono210
+#POL_Call POL_Install_gecko
 POL_Call POL_Install_gdiplus
+POL_Call POL_Install_d3dx11
+POL_Call POL_Install_d3dx10
 POL_Call POL_Install_directx9
 POL_Call POL_Install_d3dx9_43
-POL_Call POL_Install_d3dx10
-POL_Call POL_Install_d3dx11
 POL_Call POL_Install_vcrun2008
 POL_Call POL_Install_vcrun2010
 POL_Call POL_Install_xact
-POL_Call POL_Install_msxml3
-POL_Call POL_Install_dotnet20
-POL_Call POL_Install_dotnet20sp1
-POL_Call POL_Install_dotnet20sp2
-POL_Call POL_Install_dotnet30
-POL_Call POL_Install_dotnet30sp1
-POL_Call POL_Install_dotnet35
-POL_Call POL_Install_dotnet40
-POL_Call POL_Install_dotnet45
-}
+POL_Call POL_Install_wininet
+POL_Call POL_Install_corefonts
 
-POL_Wine_WaitBefore "$TITLE1"
-POL_Wine "$DOTNET35_INSTALLER"
-POL_Wine_WaitBefore ".Net Framework 4.0"
+POL_Call POL_Install_Flashplayer_ActiveX
+POL_Call POL_Install_dotnet35sp1
 POL_Call POL_Install_dotnet40
-POL_Wine_WaitBefore "$TITLE2"
+POL_Call POL_Install_msxml3
+
+Set_OS "win7"
+
+
+POL_Wine_WaitBefore "$TITLE"
 POL_Wine "$SMITE_INSTALLER"
 
 POL_Call POL_Function_OverrideDLL builtin,native dnsapi
